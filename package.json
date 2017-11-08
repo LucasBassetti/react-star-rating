@@ -1,6 +1,6 @@
 {
   "name": "react-star-rating-2",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "A simple star rating component built with React.",
   "main": "./dist/react-star-rating.min.js",
   "scripts": {
@@ -14,7 +14,10 @@
   "repository": "cameronroe/react-star-rating",
   "license": "MIT",
   "dependencies": {
-    "classnames": "^2.2.0"
+    "classnames": "^2.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.4",
@@ -50,9 +53,7 @@
     "mocha": "^2.3.3",
     "node-bourbon": "^4.2.3",
     "node-sass": "^3.4.1",
-    "react": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react-addons-test-utils": "^15.6.2",
     "sinon": "^1.17.2",
     "through2": "^2.0.0",
     "vinyl-source-stream": "^1.1.0",
