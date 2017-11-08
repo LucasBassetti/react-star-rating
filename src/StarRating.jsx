@@ -71,16 +71,6 @@ class StarRating extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.root = ReactDOM.findDOMNode(this.refs.root);
-    this.ratingContainer = ReactDOM.findDOMNode(this.refs.ratingContainer);
-  }
-
-  componentWillUnmount() {
-    delete this.root;
-    delete this.ratingContainer;
-  }
-
   /**
    * Gets the stars based on totalStars
    * @return {string} stars
@@ -316,8 +306,8 @@ class StarRating extends React.Component {
     return (
       <span className="rsr-container">
         {caption}
-        <div ref="root" className={classes}>
-          <div ref="ratingContainer"
+        <div ref={root => this.root = root} className={classes}>
+          <div ref={ratingContainer => this.ratingContainer = ratingContainer}
             className="rsr rating-gly-star"
             data-content={this.state.glyph} {...attrs}>
             {this.getSvg(this.state.rating)}
